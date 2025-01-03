@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CZ&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <div id="basic">
+        <h1>Ultimate Tic-Tac-Toe</h1>
+      </div>
+
+      <div id="board-container"></div>
+      <div id="options">
+        <button id="reset-game">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <button id="rules-btn">Rules</button>
+      </div>
+
+      <div id="rules-modal" class="modal">
+        <div class="modal-content" style="text-align: left; max-width: 600px">
+          <h2>How to Play</h2>
+          <ul
+            style="
+              list-style-type: none;
+              padding: 0;
+              font-size: 1.2rem;
+              line-height: 1.6;
+            "
+          >
+            <li>
+              🌟 <strong>Goal:</strong> Win three large grids in a row
+              (horizontally, vertically, or diagonally).
+            </li>
+            <li>
+              📍 <strong>Move:</strong> Your move determines which large grid
+              your opponent must play in next.
+            </li>
+            <li>
+              🎯 <strong>Target:</strong> The position of your move inside a
+              small grid determines the large grid your opponent must play in
+              next. (Example: placing your mark in the top-right cell sends your
+              opponent to the top-right large grid.)
+            </li>
+            <li>
+              🔓 <strong>Wildcard:</strong> If you are sent to a grid that is
+              already won or full, you can play ANYWHERE!
+            </li>
+          </ul>
+          <button id="close-rules-btn" style="margin-top: 20px">Got it!</button>
+        </div>
+      </div>
+
+      <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+          <h2 id="winner-text">Winner!</h2>
+          <button id="play-again-btn">Play Again</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
