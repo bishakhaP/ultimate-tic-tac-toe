@@ -25,7 +25,6 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 10px;
-    /* Add some padding for safety */
 }
 
 h1 {
@@ -59,7 +58,6 @@ button {
     transition: all 0.3s ease;
     box-shadow: 0 0 5px var(--neon-green);
     min-width: 100px;
-    /* Ensure buttons have decent touch target */
 }
 
 button:hover {
@@ -82,9 +80,7 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 25vmin;
-    /* RESPONSIVE SIZE */
     height: 25vmin;
-    /* RESPONSIVE SIZE */
     border: 2px solid var(--dim-green);
     position: relative;
     padding: 0.5vmin;
@@ -99,7 +95,6 @@ button:hover {
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-family: "Playwrite CZ", cursive;
     font-size: 5vmin;
-    /* Scaled text */
     cursor: pointer;
     color: var(--text-color);
     width: 100%;
