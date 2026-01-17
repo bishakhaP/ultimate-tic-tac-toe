@@ -64,6 +64,7 @@ let hoverend = (event) => {
 
 let allowedGridIndex = null;
 
+// After a click in a cell checks if that grid is valid by allowedGridIndex and checks winner by calling all important functions.
 let handleCellClick = (event) => {
 
     const cell = event.target;
@@ -107,6 +108,9 @@ let handleCellClick = (event) => {
 
 }
 
+// Used to check which grid will the player play in after a move. 
+// Decides if allowedGridIndex is null meaning all the grid is open for next move or if allowedGridIndex has a index value where the player will play next.
+
 const validateNextGrid = () => {
     const allLargeGrids = document.querySelectorAll(".large-grid");
     let gridPlayable = false;
@@ -143,6 +147,7 @@ const validateNextGrid = () => {
 
 };
 
+// Used to highlight the allowedgrid which the player will play in rn.
 const highlightAllowedGrid = () => {
     const allLargeGrids = document.querySelectorAll(".large-grid");
     allLargeGrids.forEach((grid) => {
@@ -154,7 +159,7 @@ const highlightAllowedGrid = () => {
     });
 };
 
-
+// Used to check if a particular grid is won by checking each winning pattern of ttt and return either 'X', 'O', 'Draw'.
 const checkGridWinner = (gridCells) => {
     for (let pattern of winning_grid) {
         const pos1 = gridCells[pattern[0]];
@@ -173,7 +178,7 @@ const checkGridWinner = (gridCells) => {
 };
 
 
-
+// Used to update board winners and marking each grid with 'X', 'O', 'Draw'.
 const checkAllGrids = () => {
     const allLargeGrids = document.querySelectorAll(".large-grid");
 
@@ -201,7 +206,7 @@ const checkAllGrids = () => {
 };
 
 
-
+// Used to finally mark a full grid by checking grid winner
 const markGridWinner = (grid, winner) => {
     if (winner === "Draw") {
         grid.innerText = "Draw";
@@ -213,7 +218,7 @@ const markGridWinner = (grid, winner) => {
     grid.classList.add("disabled-style");
 };
 
-
+// Checks the whole board all the 9 grids to find winner or draw simply returns either winner or draw or null.
 const checkBoardWinner = () => {
     console.log("Checking meta board with boardWinners:", boardWinners);
 

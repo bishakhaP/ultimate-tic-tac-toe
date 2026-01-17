@@ -12,13 +12,12 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+CZ&display=swap');
+
 
 body {
     background-color: var(--dark-green-bg);
     color: var(--text-color);
-    font-family: "Gloria Hallelujah", cursive;
+    font-family: "Rajdhani", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +27,7 @@ body {
 }
 
 h1 {
+    font-family: "Permanent Marker", cursive;
     font-size: clamp(2rem, 5vmin, 3.5rem);
     /* Responsive font size */
     color: var(--neon-green);
@@ -93,7 +93,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: "Playwrite CZ", cursive;
+    font-family: "Permanent Marker", cursive;
     font-size: 5vmin;
     cursor: pointer;
     color: var(--text-color);
